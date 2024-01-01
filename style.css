@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url("images/peakpx.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.motherContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* center the logincont */
+.loginCont {
+  max-width: 400px;
+  color: #fff;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  padding: 30px;
+}
+
+.loginCont input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  border-bottom: 1px solid #fff;
+}
+.active {
+  display: none;
+}
+.inputBox input {
+  outline: none;
+  background: none;
+}
+.inputBox input::placeholder {
+  color: transparent;
+}
+
+.inputBox input:not(:placeholder-shown):not(:focus) + label,
+.inputBox input:focus + label {
+  top: -5px;
+}
+
+.loginCont button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.inputBox {
+  position: relative;
+  margin: 30px 0;
+  width: 330px;
+  border-bottom: 2px solid #fff;
+}
+.inputBox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.real-chat-system {
+  color: #e4edddcd;
+  position: relative;
+  top: 0;
+  width: 1000px;
+  height: 100%;
+  border-radius: 30px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  padding: 30px;
+}
+.real-chat-system > .header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 20px; */
+}
+.real-chat-system > .header > h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+#exit_chat {
+  cursor: pointer;
+  width: 5em;
+  height: 2.5em;
+  border-radius: 10px;
+  background: none;
+  border: 1px solid #e4edddcd;
+  color: #e4edddcd;
+  outline: none;
+  font-size: 15px;
+}
+.real-chat-system > .messages {
+  width: 100%;
+  overflow: auto;
+  height: calc(100%-100px);
+}
+.real-chat-system > .messages > div > .message {
+  display: flex;
+  padding: 10px;
+}
+.real-chat-system > .messages > div > .message > div {
+  display: flex;
+  padding: 10px;
+  max-width: 80%;
+  border: 1px solid #e4edddcd;
+  border-radius: 8px;
+}
+.real-chat-system > .messages > div > .message.my-message {
+  justify-content: flex-end;
+}
+.real-chat-system > .messages > div > .message.other-message {
+  justify-self: start;
+}
+
+.real-chat-system > .messages > div > .message > .name {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.real-chat-system > .messages > div > .message > .text {
+  word-wrap: break-word;
+}
+
+.real-chat-system > .messages > .update {
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+}
+.real-chat-system > .typebox {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+}
+.real-chat-system > .typebox > input {
+  /* flex: 1; */
+  width: 80%;
+  height: 50px;
+  font-size: 18px;
+  background: none;
+  border: 1px solid #e4edddcd;
+  color: #fff;
+}
+.real-chat-system > .typebox > button {
+  cursor: pointer;
+  width: 5em;
+  height: 2.5em;
+  border-radius: 5px;
+  background: none;
+  border: 1px solid #e4edddcd;
+  color: #e4edddcd;
+  outline: none;
+  font-size: 20px;
+}

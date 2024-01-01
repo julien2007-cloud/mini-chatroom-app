@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My chat app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="motherContainer">
+      <div class="loginCont">
+        <form>
+          <div class="inputBox">
+            <input
+              type="text"
+              class="userInput"
+              placeholder="Type In Your Username"
+              id="usernameInput"
+            />
+            <label>Username</label>
+          </div>
+          <button id="loginbtn" type="submit">Login</button>
+        </form>
+      </div>
+
+      <div class="real-chat-system active">
+        <div class="header">
+          <h3><i>PIchat</i></h3>
+          <button id="exit_chat" type="button">Exit</button>
+        </div>
+
+        <div class="messages"></div>
+
+        <div class="typebox">
+          <input type="text" id="message-input" />
+          <button id="send-message" type="button">Send</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
